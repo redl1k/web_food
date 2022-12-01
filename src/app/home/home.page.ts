@@ -22,14 +22,18 @@ export class HomePage implements OnInit {
     spaceBetween: 10,
     centeredSlides: true,
     loop: true
-  }
-
+  };
+  featuredSlideOpts = {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    freeMode: true,
+  };
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
       this.http.get('https://devdactic.fra1.digitaloceanspaces.com/foodui/home.json').subscribe((res: any) => {
-        console.log((res));  
+        console.log((res));
       this.categories = res.categories;
         this.highlights = res.highlights;
         this.featured = res.featured;
