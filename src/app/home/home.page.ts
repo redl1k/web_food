@@ -34,10 +34,16 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
       this.http.get('https://devdactic.fra1.digitaloceanspaces.com/foodui/home.json').subscribe((res: any) => {
         console.log((res));
-      this.categories = res.categories;
+
+        this.categories = res.categories;
         this.highlights = res.highlights;
         this.featured = res.featured;
     });
   }
-}
 
+  doRefresh(ev){
+    setTimeout(() => {
+      ev.target.complete();
+    }, 2000);
+  }
+}

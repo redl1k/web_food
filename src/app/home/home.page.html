@@ -1,5 +1,14 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-tittle>Header</ion-tittle>
+  </ion-toolbar>
+</ion-header> -->
+
 <ion-content>
-  <ion-slides [options]="catSlideOpts">
+  <ion-refresher slot="fixed" (ionRefresher)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> <!--Default ionic Refresher was add-->
+    <ion-slides [options]="catSlideOpts">
     <ion-slide *ngFor="let cat of categories">
       <img [src]="cat.img" />
     </ion-slide>
