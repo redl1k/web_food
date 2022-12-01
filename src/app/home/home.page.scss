@@ -16,3 +16,10 @@ ion-slides {
     align-items: flex-start;
   }
 }
+
+.sticky-row{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+}
