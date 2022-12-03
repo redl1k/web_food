@@ -17,7 +17,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" scrollEvents="true" [appParallax]="img">
     <div #img class="header-image" [style.background-image]="'url(' + data?.img + ')'"></div>
 
   <ion-header collapse="condense" class="ion-no-border">
@@ -67,6 +67,30 @@
     </ion-row>
   </div>
 
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
+  <div *ngIf="data" class="ion-padding">
+    Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
+    your order is received.
+  </div>
   <div *ngIf="data" class="ion-padding">
     Please do not call {{ data.name }} for any amends to your order, as these cannot be made once
     your order is received.

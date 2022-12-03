@@ -5,3 +5,19 @@
   height: 30vh;
   will-change: transform;
 }
+
+ion-content{
+  position: absolute;
+  --background: #f1f1f1;
+  --paddint-botom: 50px;
+}
+
+ion-toolbar{
+  ion-icon{
+    font-size: 22px;
+  }
+}
+
+.light-bg{
+  background: #ffffff;
+}
