@@ -28,6 +28,8 @@ export class HomePage implements OnInit {
     spaceBetween: 10,
     freeMode: true,
   };
+  showLocationDetail = false;
+
 
   constructor(private http: HttpClient) {}
 
@@ -46,4 +48,9 @@ export class HomePage implements OnInit {
       ev.target.complete();
     }, 2000);
   }
+
+	onScroll(ev) {
+		const offset = ev.detail.scrollTop;
+		this.showLocationDetail = offset > 50;
+	}
 }

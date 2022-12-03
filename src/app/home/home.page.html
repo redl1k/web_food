@@ -1,4 +1,5 @@
-<ion-content scrollEvents="true" [appHideHeader]="hideheader">
+<ion-content scrollEvents="true" [appHideHeader]="hideheader" (ionScroll) ="onScroll($event)">
+
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher> <!--Default ionic Refresher was add-->
@@ -23,6 +24,9 @@
 
   <ion-row class="sticky-row">
     <ion-col size="10">
+      <ion-text class="ion-padding-start" color="medium"
+        [ngClass]="{'location-visible': showLocationDetail, 'location-hidden': !showLocationDetail}">
+        London</ion-text>
       <ion-searchbar placeholder="Dishes, restaurants or cuisines"></ion-searchbar>
     </ion-col>
     <ion-col size="2">
