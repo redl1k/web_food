@@ -1,10 +1,4 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-tittle>Header</ion-tittle>
-  </ion-toolbar>
-</ion-header> -->
-
-<ion-content>
+<ion-content scrollEvents="true" [appHideHeader]="hideheader">
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher> <!--Default ionic Refresher was add-->
